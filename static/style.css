@@ -1,0 +1,40 @@
+body {
+  font-family: 'Coming Soon', cursive;
+  color: #666;
+  background-image: url('linedpaper.png');
+}
+
+.title {
+  font-size: 3em;
+}
+.header {
+  margin-top: 8px;
+  text-align: center;
+  text-shadow: 4px 4px 4px lightgrey;
+}
+
+.liststyle {
+  font-size: 1.3em;
+
+}
+.centered {
+  text-align: center;
+}
+.buttons {
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: .7em;
+  box-shadow: 3px 3px 3px grey;
+}
+
+.topButtons {
+  text-align: center;
+}
+
+.todolist {
+  text-align: left;
+}
+
+.completed {
+  text-decoration: line-through;
+}

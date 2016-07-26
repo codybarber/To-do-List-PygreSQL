@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% block body %}
+<form class="todolist" action="/markcomplete" method="post">
+  <div class="topButtons">
+
+    <button type="submit" name="complete" class="btn btn-success buttons">Completed</button>
+    <button type="submit" name="undo" class="btn btn-warning buttons">Undo</button>
+    <button type="submit" name="delete" class="btn btn-danger buttons">Delete</button>
+  </div>
+  <div class="todolist">
+
+
+  <ul style="list-style: none;">
+    {% for task in list %}
+    <li {% if task.completed %}class="completed"{% endif %}>
+      <input type="checkbox" name="{{task.id}}">
+      {{task.task}}
+    </li>
+    {% endfor %}
+  </ul>
+  </div>
+</form>
+<form class="todolist" action="/addtask" method="post">
+  <ul class="centered" style="list-style: none;">
+    <li><input class="inputbox" type="text" name="task_name" placeholder="Add Task" autofocus="autofocus">
+      <button type="submit" class="btn btn-primary buttons" style="margin-top: 5px; text-align: center;">Add</button></li>
+    </ul>
+  </form>
+  {% endblock %}
